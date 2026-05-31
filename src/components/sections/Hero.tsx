@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SITE_CONFIG } from "../../data/site";
 
 export default function Hero() {
   return (
@@ -39,7 +40,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://github.com/shashvat2005"
+              href={SITE_CONFIG.github}
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 rounded-lg border border-zinc-700 px-6 py-3 text-zinc-300 transition hover:border-zinc-500"
@@ -49,7 +50,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/shashvat-garg"
+              href={SITE_CONFIG.linkedin}
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 rounded-lg border border-zinc-700 px-6 py-3 text-zinc-300 transition hover:border-zinc-500"

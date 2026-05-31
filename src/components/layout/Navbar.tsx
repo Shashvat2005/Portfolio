@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {FileText } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SITE_CONFIG } from "../../data/site";
 
 export default function Navbar() {
   return (
@@ -35,7 +36,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/shashvat2005"
+            href={SITE_CONFIG.github}
             target="_blank"
             rel="noreferrer"
             className="text-zinc-400 hover:text-white"
@@ -44,7 +45,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="YOUR_LINKEDIN"
+            href={SITE_CONFIG.linkedin}
             target="_blank"
             rel="noreferrer"
             className="text-zinc-400 hover:text-white"
@@ -53,7 +54,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="/resume.pdf"
+            href={SITE_CONFIG.resume}
             className="text-zinc-400 hover:text-white"
           >
             <FileText size={20} />
