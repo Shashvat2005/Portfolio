@@ -1,12 +1,14 @@
 import { experiences } from "@/data/experience";
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 export default function Experience() {
   return (
     <section
       id="experience"
-      className="mx-auto max-w-7xl px-6 py-28"
+      className="mx-auto max-w-7xl px-6 py-20"
     >
-      <div className="mb-16">
+      <div className="mb-10">
         <p className="mb-3 text-blue-500">
           &gt; experience
         </p>
@@ -22,7 +24,6 @@ export default function Experience() {
       </div>
 
       <div className="relative">
-        {/* Vertical Timeline Line */}
         <div className="absolute left-4 top-0 h-full w-px bg-zinc-800" />
 
         <div className="space-y-12">
@@ -36,11 +37,10 @@ export default function Experience() {
                 <div className="h-3 w-3 rounded-full bg-blue-500" />
               </div>
 
-              {/* Content Card */}
-              <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 transition-all duration-300 hover:border-blue-500/50">
+              {/* Card */}
+              <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/50 hover:shadow-xl">
                 
-                <div className="mb-2 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-                  
+                <div className="mb-3 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                   <div>
                     <h3 className="text-2xl font-semibold text-white">
                       {experience.role}
@@ -60,6 +60,7 @@ export default function Experience() {
                   {experience.description}
                 </p>
 
+                {/* Skills */}
                 <div className="flex flex-wrap gap-3">
                   {experience.skills.map((skill) => (
                     <span
@@ -70,6 +71,27 @@ export default function Experience() {
                     </span>
                   ))}
                 </div>
+
+                {/* GitHub Links */}
+                {experience.links && experience.links.length > 0 && (
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {experience.links.map((link) => (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-2 rounded-lg border border-zinc-700 px-4 py-2 text-sm text-zinc-300 transition hover:border-blue-500 hover:text-white"
+                      >
+                        <FaGithub size={16} />
+
+                        <span>{link.label}</span>
+
+                        <ExternalLink size={14} />
+                      </a>
+                    ))}
+                  </div>
+                )}
 
               </div>
             </div>

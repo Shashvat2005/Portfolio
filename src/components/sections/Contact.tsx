@@ -9,7 +9,7 @@ export default function Contact() {
       id="contact"
       className="mx-auto max-w-7xl px-6 py-28"
     >
-      <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-10 md:p-16">
+      <div className="p-10 md:p-16">
         
         <div className="mb-12">
           <p className="mb-3 text-blue-500">

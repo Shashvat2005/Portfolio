@@ -2,9 +2,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="mx-auto max-w-7xl px-6 py-28"
+      className="mx-auto max-w-7xl px-6 py-20"
     >
-      <div className="mb-16">
+      <div className="mb-10">
         <p className="mb-3 text-blue-500">
           &gt; about
         </p>
@@ -14,7 +14,7 @@ export default function About() {
         </h2>
       </div>
 
-      <div className="grid gap-12 lg:grid-cols-2">
+      <div className="grid gap-1 lg:grid-cols-2">
         
         {/* Left Side */}
         <div>

@@ -4,4 +4,8 @@ export interface Experience {
   period: string;
   description: string;
   skills: string[];
+  links?: {
+    label: string;
+    url: string;
+  }[];
 }

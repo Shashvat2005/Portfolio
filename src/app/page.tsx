@@ -7,19 +7,42 @@ import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import Contact from "@/components/sections/Contact";
+import FadeIn from "@/components/ui/FadeIn";
+import CompetitiveProgramming from "@/components/sections/CodingProfiles";
 
 export default function Home() {
   return (
     <>
       <Navbar />
 
-      <main className="bg-black">
+      <main className="relative bg-black">
+
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact />
+
+        <FadeIn>
+          <About />
+        </FadeIn>
+
+        <FadeIn>
+          <Experience />
+        </FadeIn>
+
+        <FadeIn>
+          <Projects />
+        </FadeIn>
+
+        <FadeIn>
+          <CompetitiveProgramming />
+        </FadeIn>
+
+        <FadeIn>
+          <Skills />
+        </FadeIn>
+
+        <FadeIn>
+          <Contact />
+        </FadeIn>
+
       </main>
 
       <Footer />

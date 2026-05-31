@@ -7,8 +7,15 @@ import { SITE_CONFIG } from "../../data/site";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-black">
-      <div className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center gap-16 px-6 lg:flex-row">
+    <section className="relative overflow-hidden bg-black isolate">
+
+        {/* <div className="absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute -left-64 top-20 h-[700px] w-[700px] rounded-full bg-blue-600/20 blur-[180px]" />
+
+            <div className="absolute -right-64 bottom-0 h-[700px] w-[700px] rounded-full bg-violet-600/20 blur-[180px]" />
+        </div> */}
+
+      <div className="mx-auto flex min-h-[80vh] max-w-7xl flex-col items-center justify-center gap-16 px-6 lg:flex-row">
 
         {/* LEFT SIDE */}
         <motion.div
@@ -76,26 +83,34 @@ export default function Hero() {
             </div>
 
             <pre className="overflow-x-auto text-sm text-zinc-300">
-{`const developer = {
-  name: "Shashvat Garg",
-  role: "CSE Student",
-  internship: "IIT Roorkee",
+            {`const developer = {
+    name: "Shashvat Garg",
+    role: "CSE Student",
+    
+    internships: [
+        "IIT Roorkee", 
+        "Amdox Technologies"
+    ],
 
-  skills: [
-    "Java",
-    "Python",
-    "React",
-    "Next.js",
-    "Flutter",
-    "Cybersecurity"
-  ],
+    skills: [
+        "Java",
+        "Python",
+        "React",
+        "Next.js",
+        "Flutter",
+        "Cybersecurity"
+    ],
 
-  currentlyBuilding:
-    "Secure Systems"
+    competitiveProgramming: 
+        "500+ DSA Questions Solved",
+
+    currentlyBuilding: 
+        "Booking System for Hotels using Spring Boot"
 };`}
             </pre>
           </div>
         </motion.div>
+
       </div>
     </section>
   );
