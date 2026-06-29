@@ -10,6 +10,8 @@ export const skillCategories: SkillCategory[] = [
       "JavaScript",
       "TypeScript",
       "SQL",
+      "C",
+      "Dart"
     ],
   },
 
@@ -20,7 +22,7 @@ export const skillCategories: SkillCategory[] = [
       "Next.js",
       "Tailwind CSS",
       "HTML",
-      "CSS",
+      "CSS"
     ],
   },
 

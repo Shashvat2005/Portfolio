@@ -4,6 +4,34 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SITE_CONFIG } from "../../data/site";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+const codeString = `export const shashvat = {
+  name: "Shashvat Garg",
+  role: "CSE Student",
+
+  internships: [
+    "IIT Roorkee",
+    "Amdox Technologies",
+    "Star Cement ABG"
+  ],
+
+  skills: [
+    "Java",
+    "Python",
+    "React",
+    "Next.js",
+    "Flutter",
+    "Cybersecurity"
+  ],
+
+  competitiveProgramming:
+    "500+ DSA Questions Solved"
+
+  currentlyBuilding:
+    "Hotel Booking System using Spring Boot"
+};`;
 
 export default function Hero() {
   return (
@@ -82,32 +110,25 @@ export default function Hero() {
               <div className="h-3 w-3 rounded-full bg-green-500" />
             </div>
 
-            <pre className="overflow-x-auto text-sm text-zinc-300">
-            {`const developer = {
-    name: "Shashvat Garg",
-    role: "CSE Student",
-    
-    internships: [
-        "IIT Roorkee", 
-        "Amdox Technologies"
-    ],
+            <div className="mb-4 flex items-center border-b border-zinc-800 pb-3">
+              <span className="rounded bg-zinc-800 px-3 py-1 text-sm text-zinc-300">
+                shashvat.config.ts
+              </span>
+            </div>
 
-    skills: [
-        "Java",
-        "Python",
-        "React",
-        "Next.js",
-        "Flutter",
-        "Cybersecurity"
-    ],
-
-    competitiveProgramming: 
-        "500+ DSA Questions Solved",
-
-    currentlyBuilding: 
-        "Booking System for Hotels using Spring Boot"
-};`}
-            </pre>
+            <SyntaxHighlighter
+  language="javascript"
+  style={vscDarkPlus}
+  customStyle={{
+    margin: 0,
+    padding: 0,
+    background: "transparent",
+    fontSize: "0.9rem",
+  }}
+  showLineNumbers={false}
+>
+  {codeString}
+</SyntaxHighlighter>
           </div>
         </motion.div>
 
